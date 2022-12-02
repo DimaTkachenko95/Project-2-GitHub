@@ -1,0 +1,505 @@
+.header{
+    height: 70px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+.logo_btn {
+    margin: auto;
+    position: absolute;
+    right: 0;
+}
+
+.btns {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    line-height: 1;
+    margin: auto;
+    padding: 1.6em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.btns:hover, .btns:focus {
+    color: #000000;
+    outline: 0;
+}
+.third {
+    margin-right: 10px;
+    border-color: #3498db;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    transition: all 150ms ease-in-out;
+}
+.third:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
+/* Full-width input fields */
+.text_type {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* Set a style for all buttons */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+
+
+/* The Modal (background) */
+.modals {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modals-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.closeses {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.closeses:hover,
+.closeses:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+body {
+
+    position: relative;
+}
+
+.alert {
+    position: fixed;
+    right: 0;
+    top: 0;
+    min-width: 250px;
+}
+
+.task-list--item {
+    cursor: pointer;
+    position: relative;
+}
+
+.task-list--item-completed,
+.task-list--item-completed:focus,
+.task-list-item-completed:hover {
+    text-decoration: line-through !important;
+}
+
+.g-content {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tasks-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+    margin: auto;
+    padding: 50px;
+}
+
+.tasks-board .card {
+    margin: 0;
+}
+
+.icon-del {
+    position: absolute;
+    right: 4px;
+    top: 14px;
+    cursor: pointer;
+    display: none;
+}
+
+.task-list--item:hover .icon-del {
+    display: block;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+
+.card-body {
+    max-height: 484px;
+    overflow-y: auto;
+}
+
+.icon-add-task {
+    cursor: pointer;
+}
+
+.card-header:hover .icon-del {
+    display: flex;
+}
+
+.modal-form {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    background-color: bisque;
+    padding: 50px;
+}
+
+.modal-form input {
+    display: block;
+    margin: 20px;
+}
+.modal-backdrop {
+    opacity: 0.5;
+}
+.form {
+    padding: 40px 20px;
+    max-width: 400px;
+}
+.visibleFalse{
+    display: none;
+}
+ #urgenty{
+    margin: 10px 0px;
+}
+.btnd {
+    display: inline-block;
+    box-sizing: border-box;
+    /*@iarosh   padding: 10px 20px;*!*/
+    /*@iarosh  margin: 0 15px 15px 0;*/
+    /*@iarosh  height: 40px;*/
+    /*@iarosh  line-height: 40px;*/
+
+    padding: 0 15px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1a73e8;
+    position: relative;
+    overflow:hidden;
+    vertical-align: top;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    z-index: 1;
+}
+/*.btn {*/
+/*    display: inline-block;*/
+/*    box-sizing: border-box;*/
+/*    !*---------------------------------------------------------------------------------------------------------  *!*/
+/*    !*@iarosh *!  padding: 10px 20px;*/
+/*    !*@iarosh *! !*margin: 0 15px 15px 0;*!*/
+/*    !*@iarosh *! !*height: 40px;*!*/
+/*    !*@iarosh *! line-height: 40px;*/
+/*    !*-----------------------------------------------------------------------------------------------------------  *!*/
+/*    outline: none;*/
+/*    border: none;*/
+/*    border-radius: 4px;*/
+/*    font-size: 14px;*/
+/*    font-weight: 500;*/
+/*    text-decoration: none;*/
+/*    color: #fff;*/
+/*    background-color: #1a73e8;*/
+/*    position: relative;*/
+/*    overflow:hidden;*/
+/*    vertical-align: top;*/
+/*    cursor: pointer;*/
+/*    user-select: none;*/
+/*    appearance: none;*/
+/*    touch-action: manipulation;*/
+/*    z-index: 1;*/
+/*}*/
+.btnd span{
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: btn_ripples 0.6s linear infinite;
+}
+@keyframes btn_ripples {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+    100% {
+        width: 1000px;
+        height: 1000px;
+        opacity: 0;
+    }
+}
+.btnd:hover {
+    box-shadow: 0 1px 2px 0 rgb(26 115 232 / 45%), 0 1px 3px 1px rgb(26 115 232 / 30%);
+    background-color: #297be6;
+}
+.btnd:active {
+    box-shadow: 0 1px 2px 0 rgb(26 115 232 / 45%), 0 2px 6px 2px rgb(26 115 232 / 30%);
+    background-color: #1a73e8 !important;
+}
+.btnd:focus-visible {
+    box-shadow: 0 0 0 3px lightskyblue;
+}
+.btnd:disabled {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+.card_deck{
+    position: relative;
+    /*min-height: 80vh;*/
+}
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 73px;
+
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.search_input::placeholder{
+    color: black;
+}
+
+.search_input{
+    color: black;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 300px;
+    caret-color:white;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover > .search_icon{
+    background: white;
+    color: #1a73e8;
+}
+
+.search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+}
+
+.search_icon:hover > .fa-search {
+    transform: scale(1.1);
+}
+.search_icon:active > .fa-search {
+    transform: scale(1.2);
+}
+
+.contain{
+    height: 400px;
+    width: 400px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translatex(-50%) translatey(-50%);
+}
+
+.contain svg {
+    padding-top: 250px;
+    vertical-align: top;
+    width: 100%;
+}
+
+svg .beer{
+    animation-name: empty;
+    animation-fill-mode: forwards;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    fill: #F9CF68;
+}
+
+
+@keyframes empty{
+    0%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    30%{
+        clip-path: polygon(0 16%, 100% 12%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0 40%, 100% 44%, 100% 100%, 0% 100%);
+    }
+    70%{
+        clip-path: polygon(0 69%, 100% 66%, 100% 100%, 0% 100%);
+    }
+    100%{
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    }
+}
+
+.data-found {
+    background-color: rgba(255, 255, 0, 0.5);
+}
+/*#btn-filter{*/
+/*    margin-right: 10px;*/
+/*    border-radius: 10px;*/
+/*}*/
+.loader{
+    /*display: none;*/
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.used-filter{
+    scale: 1.2;
+    color: #F9CF68;
+}
+
+.pole{
+    width: 1200px;
+    position: absolute;
+    top: 115px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: linear-gradient(rgba(0,0,225,0), rgb(52,152,219));
+}
+.icon-edit-task{
+    position: absolute;
+    right: 35px;
+    top: 10px;
+}
+.tru {
+    width: 50px;
+    position: absolute;
+    right: 40px;
+    top: 29px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+}
+.modal-title{
+    padding-top: 20px;
+}
+.modal-body p{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}

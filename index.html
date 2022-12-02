@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <img  src="img/1624626443_Logo_DAN.png" alt="logo">
+    </div>
+
+    <div class="logo_btn">
+        <div class="d-flex justify-content-center h-100">
+        <button id = "btnClen" class="btns third" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Вход</button>
+        <button id = "btn-new-user" class="btns third" style="width:auto; display:none;">Создать визит</button>
+
+        <button id="btn-filter" class="btn-filter btns third" style="width:auto; display:none;"><i class="icon-filter fa fa-filter"></i></button>
+            <div class=" searchbar btns third search" style="width:auto; display:none;">
+                <input class="search_input"  type="text" name="" placeholder="Search...">
+                <a href="#" class="search_icon"><i class="icon fas fa-search"></i></a>
+            </div>
+        </div>
+
+        <div id="id01" class="modals">
+
+            <form  class="modals-content animate ">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="closeses" title="Close Modals">×</span>
+                    <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input id="tex" class="text_type" type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input id="pass" class="text_type" type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button id="send">Login</button>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+<div class="pole">
+    <header class="d-flex justify-content-between align-items-center g-content mt-3 mb-3">
+    <!--        <button id = "btn-new-user" class="btn" style="width:auto;display: none">Создать визит</button>-->
+        <!--        <button id="btn-new-user" class="btn">Add User</button>-->
+
+<!--        <div class="d-flex justify-content-center h-100">-->
+<!--            <button id="btn-filter" class="btn btn-filter"><i class="icon-filter fa fa-filter"></i></button>-->
+<!--            <div class="searchbar">-->
+<!--                <input class="search_input" type="text" name="" placeholder="Search...">-->
+<!--                <a href="#" class="search_icon"><i class="icon fas fa-search"></i></a>-->
+<!--            </div>-->
+<!--        </div>-->
+    </header>
+	<main class="g-content">
+		<div class="card-deck tasks-board card_deck">
+
+		</div>
+	</main>
+
+</div>
+<script type="module" src="./index.js"></script>
+</body>
+
+</html>
